@@ -1,4 +1,3 @@
-import 'package:date_time_format/date_time_format.dart';
 import 'package:flutter/material.dart';
 
 extension DateTimeExtension on DateTime {
@@ -29,6 +28,7 @@ extension DateTimeExtension on DateTime {
       };
 
   //--------------------------------------------------------------------------------------------
+  /// This getter formats the date up to six week before and after now, beyond which it will return normal date formatting.
   String get fromNow {
     // first check if date is today, tomorrow or yesterday
     DateTime today = DateUtils.dateOnly(DateTime.now());
@@ -60,7 +60,7 @@ extension DateTimeExtension on DateTime {
       int weeks = startOfThisWeek.difference(starOfAppointmentWeek).inDays ~/ 7;
 
       if (weeks.abs() > 6) {
-        return format("D, d M Y");
+        return "${weekdayName.split('').take(3).join()}, $day ${monthName.split('').take(3).join()} $year";
       }
 
       if (weeks.isNegative) {

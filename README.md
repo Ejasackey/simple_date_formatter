@@ -26,6 +26,7 @@ Use the `fromNow` getter on any  `DateTime` object.
 ```dart
 DateTime someDate = DateTime.now().add(Duration(days: 20));
 print(someDate.fromNow); // Next Week Friday.
+// This getter formats the date up to six week before and after now, beyond which it will return normal date formatting.
 ```
 
 ## Additional Features
