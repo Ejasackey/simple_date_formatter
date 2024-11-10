@@ -12,7 +12,7 @@ and the Flutter guide for
 -->
 
 # Simple Date Formatter
-A very simple package for format `DateTime` objects in simple terms like Today, Next Week Wednesday etc.
+A very simple package to format `DateTime` objects in simple terms like Today, Next Week Wednesday etc.
 
 ## Usage
 
